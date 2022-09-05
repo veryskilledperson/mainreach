@@ -1,0 +1,12 @@
+for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren()) do
+		if v:isA("Tool") then
+			local a = Instance.new("SelectionSphere",v.Handle)
+			v.Handle.Massless = true
+			v.Handle.Transparency = 0
+			a.Adornee = v.Handle
+			v.Handle.Size = Vector3.new(18, 18 , 18)
+			local selectionBox = Instance.new("SelectionSphere",v.Handle)
+			selectionBox.Adornee = v.Handle
+			SurfaceSelection = 10
+		end
+	end
